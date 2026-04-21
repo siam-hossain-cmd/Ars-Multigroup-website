@@ -1,0 +1,141 @@
+/* ============================================================
+   Contact Page Styles
+   ============================================================ */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Contact Details */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: var(--spacing-xl);
+}
+
+.contact-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.cd-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(200,151,58,0.15);
+  color: var(--accent);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.cd-content h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.cd-content p {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+.cd-content a {
+  color: var(--primary-light);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.cd-content a:hover {
+  color: var(--accent);
+}
+
+/* Form Panel */
+.form-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border);
+}
+
+.form-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.form-intro {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+.submit-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 1.1rem;
+  font-size: 1.05rem;
+  margin-top: var(--spacing-sm);
+}
+
+.submit-btn.sending {
+  opacity: 0.8;
+  cursor: wait;
+}
+
+.submit-btn.success {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+.form-success {
+  text-align: center;
+  color: var(--success);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: var(--spacing-sm);
+}
+
+/* Map Section */
+.map-section {
+  padding: 0;
+}
+
+.map-container {
+  width: 100%;
+  height: 500px;
+  background: #e5e3df; /* Map placeholder color */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+@media (max-width: 640px) {
+  .form-row { grid-template-columns: 1fr; }
+  .form-card { padding: 2rem 1.5rem; }
+}

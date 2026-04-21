@@ -1,0 +1,112 @@
+/* ============================================================
+   Industries Section
+   ============================================================ */
+
+.industries-section {
+  background: var(--bg-light);
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.industry-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border: 1px solid var(--border);
+  transition: all var(--transition-base);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.industry-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  z-index: 0;
+}
+
+.industry-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.industry-card:hover::before {
+  opacity: 1;
+}
+
+.industry-card > * {
+  position: relative;
+  z-index: 1;
+  transition: color var(--transition-base);
+}
+
+.industry-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  display: block;
+  transition: transform var(--transition-base);
+}
+
+.industry-card:hover .industry-icon {
+  transform: scale(1.15);
+}
+
+.industry-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--spacing-sm);
+  transition: color var(--transition-base);
+}
+
+.industry-card:hover .industry-title {
+  color: var(--white);
+}
+
+.industry-desc {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  transition: color var(--transition-base);
+}
+
+.industry-card:hover .industry-desc {
+  color: rgba(255,255,255,0.75);
+}
+
+.industry-tag {
+  display: inline-block;
+  margin-top: var(--spacing-md);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(200,151,58,0.1);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+}
+
+.industry-card:hover .industry-tag {
+  background: rgba(200,151,58,0.25);
+  color: var(--accent-light);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .industries-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .industries-grid { grid-template-columns: 1fr; }
+}

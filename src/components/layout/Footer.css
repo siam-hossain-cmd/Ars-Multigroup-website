@@ -34,19 +34,24 @@
   margin-bottom: var(--spacing-lg);
 }
 
-.footer-logo-icon {
-  width: 42px;
-  height: 42px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-light));
-  border-radius: var(--radius-md);
+.footer-logo-wrapper {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-heading);
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--white);
   flex-shrink: 0;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.footer-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.25) translateY(-10%);
 }
 
 .footer-logo-name {

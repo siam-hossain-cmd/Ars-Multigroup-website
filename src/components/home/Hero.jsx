@@ -61,10 +61,9 @@ export default function Hero() {
       <div className="hero-stats">
         <div className="container hero-stats-inner">
           {[
-            { num: '10+', label: 'Years Experience' },
-            { num: '500+', label: 'Happy Clients' },
-            { num: '1,200+', label: 'Staff Deployed' },
-            { num: '11', label: 'Service Types' },
+            { num: '**', label: 'Years Experience' },
+            { num: '**', label: 'Happy Clients' },
+            { num: '**', label: 'Staff Deployed' },
           ].map(stat => (
             <div key={stat.label} className="hero-stat">
               <div className="stat-number">{stat.num}</div>

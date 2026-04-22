@@ -1,7 +1,7 @@
 import './WhatsAppButton.css';
 
 export default function WhatsAppButton() {
-  const phoneNumber = '60123456789';
+  const phoneNumber = '60379726456';
   const message = encodeURIComponent('Hello ARS Multigroup! I would like to inquire about your cleaning services.');
   const waUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 

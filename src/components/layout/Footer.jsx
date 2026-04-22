@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import {
   FiMapPin, FiPhone, FiMail, FiClock,
-  FiFacebook, FiInstagram, FiLinkedin
+  FiFacebook, FiInstagram, FiLinkedin, FiAward
 } from 'react-icons/fi';
+import logo from '../../assets/logo ars.png';
 import './Footer.css';
 
 const services = [
@@ -35,14 +36,16 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="footer-col footer-brand">
             <div className="footer-logo">
-              <div className="footer-logo-icon"><span>ARS</span></div>
+              <div className="footer-logo-wrapper">
+                <img src={logo} alt="ARS Logo" className="footer-logo-img" />
+              </div>
               <div>
-                <div className="footer-logo-name">ARS Multigroup</div>
-                <div className="footer-logo-tagline">Cleaning & Manpower Services</div>
+                <div className="footer-logo-name">ARS MULTIGROUP<br/>SDN BHD</div>
+                <div className="footer-logo-tagline">201801024075 (1286095-V)</div>
               </div>
             </div>
             <p className="footer-desc">
-              A trusted 100% Bumiputra company delivering professional cleaning, manpower, landscape, and facility services across Malaysia since establishment.
+              A trusted 100% Bumiputra company delivering professional cleaning, premium car wash services, and fashion retail across Malaysia since establishment.
             </p>
             <div className="footer-socials">
               <a href="#" aria-label="Facebook" className="social-link"><FiFacebook /></a>
@@ -50,7 +53,7 @@ export default function Footer() {
               <a href="#" aria-label="LinkedIn" className="social-link"><FiLinkedin /></a>
             </div>
             <div className="footer-badge">
-              <span>🏅 100% Bumiputra Company</span>
+              <span style={{display:'flex', alignItems:'center', gap:'8px', justifyContent:'center'}}><FiAward size={18} /> 100% Bumiputra Company</span>
             </div>
           </div>
 
@@ -90,11 +93,11 @@ export default function Footer() {
             <ul className="footer-contact-list">
               <li>
                 <FiMapPin className="contact-icon" />
-                <span>No. 12, Jalan Industri, Taman Perindustrian, 47500 Subang Jaya, Selangor, Malaysia</span>
+                <span>No 5-02 (5th Floor), Plaza Prima Batu 4 ½ , Jalan Klang Lama, 58200 Kuala Lumpur.</span>
               </li>
               <li>
                 <FiPhone className="contact-icon" />
-                <a href="tel:+60123456789">+60 12-345 6789</a>
+                <a href="tel:0379726456">03-7972 6456</a>
               </li>
               <li>
                 <FiMail className="contact-icon" />
@@ -112,7 +115,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
           <p>© {new Date().getFullYear()} ARS Multigroup Sdn. Bhd. All rights reserved.</p>
-          <p>Reg. No.: 123456-X | SSM Registered | Malaysia</p>
+          <p>ARS MULTIGROUP SDN BHD | 201801024075 (1286095-V)</p>
         </div>
       </div>
     </footer>

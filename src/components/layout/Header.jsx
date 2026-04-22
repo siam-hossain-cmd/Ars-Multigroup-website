@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { FiMenu, FiX, FiPhone } from 'react-icons/fi';
+import logo from '../../assets/logo ars.png';
 import './Header.css';
 
 const navLinks = [
@@ -32,12 +33,12 @@ export default function Header() {
       <div className="container header-inner">
         {/* Logo */}
         <Link to="/" className="header-logo" onClick={() => setMenuOpen(false)}>
-          <div className="logo-icon">
-            <span>ARS</span>
+          <div className="logo-wrapper">
+            <img src={logo} alt="ARS Logo" className="logo-img" />
           </div>
           <div className="logo-text">
             <span className="logo-name">ARS Multigroup</span>
-            <span className="logo-tagline">Cleaning & Manpower Services</span>
+            <span className="logo-tagline">Cleaning • Car Wash • Fashion</span>
           </div>
         </Link>
 
@@ -57,9 +58,9 @@ export default function Header() {
 
         {/* CTA + Hamburger */}
         <div className="header-actions">
-          <a href="tel:+60123456789" className="header-phone">
+          <a href="tel:0379726456" className="header-phone">
             <FiPhone size={14} />
-            <span>+60 12-345 6789</span>
+            <span>03-7972 6456</span>
           </a>
           <Link to="/contact" className="btn btn-primary header-cta">
             Get Quote

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FiArrowRight, FiCheckCircle } from 'react-icons/fi';
+import { FiArrowRight, FiCheckCircle, FiHome, FiTarget, FiEye } from 'react-icons/fi';
 import ScrollReveal from '../components/shared/ScrollReveal';
 import SectionHeader from '../components/shared/SectionHeader';
 import CtaBanner from '../components/home/CtaBanner';
@@ -23,11 +23,11 @@ const team = [
 
 const registrations = [
   { label: 'Company Registration', value: 'ARS Multigroup Sdn. Bhd.' },
-  { label: 'SSM Registration No.', value: '123456-X' },
+  { label: 'SSM Registration No.', value: '201801024075 (1286095-V)' },
   { label: 'Bumiputra Status', value: '100% Bumiputra Company' },
   { label: 'CIDB Registered', value: 'Grade G1 – G7' },
   { label: 'MOF Registered', value: 'Ministry of Finance Malaysia' },
-  { label: 'Office Address', value: 'No. 12, Jalan Industri, Subang Jaya, 47500 Selangor' },
+  { label: 'Office Address', value: 'No 5-02 (5th Floor), Plaza Prima Batu 4 ½, Jalan Klang Lama, 58200 Kuala Lumpur.' },
 ];
 
 export default function About() {
@@ -57,15 +57,15 @@ export default function About() {
             <ScrollReveal>
               <div className="about-intro-visual">
                 <div className="about-placeholder-main">
-                  <span>🏢</span>
+                  <span style={{color:'var(--accent)'}}><FiHome size={40} /></span>
                   <p>ARS Multigroup Headquarters</p>
-                  <small>Subang Jaya, Selangor</small>
+                  <small>Kuala Lumpur</small>
                 </div>
                 <div className="about-stats-float">
                   {[
-                    { num: '10+', label: 'Years' },
-                    { num: '500+', label: 'Clients' },
-                    { num: '1,200+', label: 'Staff' },
+                    { num: '**', label: 'Years' },
+                    { num: '**', label: 'Clients' },
+                    { num: '**', label: 'Staff' },
                   ].map(s => (
                     <div key={s.label} className="about-stat-item">
                       <div className="stat-number">{s.num}</div>
@@ -87,9 +87,7 @@ export default function About() {
               </ScrollReveal>
               <ScrollReveal delay={100}>
                 <p className="about-para">
-                  ARS Multigroup Sdn. Bhd. is a reputable Malaysian company specializing in professional cleaning,
-                  manpower supply, landscape maintenance, high-rise façade cleaning, and diverse facility
-                  management services.
+                  ARS Multigroup Sdn. Bhd. is a reputable Malaysian company specializing in professional cleaning services, premium car wash operations, fashion retail, and diverse facility management solutions.
                 </p>
                 <p className="about-para">
                   Established over a decade ago, we have grown from a small cleaning company to a comprehensive
@@ -103,11 +101,11 @@ export default function About() {
               <ScrollReveal delay={200}>
                 <div className="about-mission">
                   <div className="mission-card">
-                    <h4>🎯 Our Mission</h4>
+                    <h4 style={{display:'flex', alignItems:'center', gap:'8px'}}><FiTarget className="mission-icon" color="var(--accent)" /> Our Mission</h4>
                     <p>To provide reliable, high-quality, and affordable cleaning and manpower services that exceed client expectations while building lasting partnerships.</p>
                   </div>
                   <div className="mission-card">
-                    <h4>🔭 Our Vision</h4>
+                    <h4 style={{display:'flex', alignItems:'center', gap:'8px'}}><FiEye className="mission-icon" color="var(--accent)" /> Our Vision</h4>
                     <p>To be Malaysia's most trusted and preferred facility services company, recognized for excellence, innovation, and workforce development.</p>
                   </div>
                 </div>

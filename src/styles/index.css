@@ -323,10 +323,9 @@ p {
 /* --- Page Hero --- */
 .page-hero {
   background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, var(--primary-light) 100%);
-  padding: 7rem 0 4rem;
+  padding: calc(var(--nav-height) + 4rem) 0 4rem;
   position: relative;
   overflow: hidden;
-  margin-top: var(--nav-height);
 }
 
 .page-hero::before {

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiStar } from 'react-icons/fi';
 import ScrollReveal from '../shared/ScrollReveal';
 import SectionHeader from '../shared/SectionHeader';
 import './Testimonials.css';
@@ -48,8 +48,10 @@ export default function Testimonials() {
           {testimonials.map((t, i) => (
             <ScrollReveal key={t.name} delay={i * 100}>
               <div className="testimonial-card">
-                <div className="testimonial-stars">
-                  {'★'.repeat(t.rating)}
+                <div className="testimonial-stars" style={{display:'flex', gap:'2px'}}>
+                  {[...Array(t.rating)].map((_, idx) => (
+                    <FiStar key={idx} color="var(--accent-light)" fill="var(--accent-light)" size={16} />
+                  ))}
                 </div>
                 <blockquote className="testimonial-quote">
                   "{t.quote}"

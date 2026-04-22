@@ -6,16 +6,16 @@ import SectionHeader from '../components/shared/SectionHeader';
 import CtaBanner from '../components/home/CtaBanner';
 import './Gallery.css';
 
+import imgLandscaping from '../assets/galary/landscaping 1.jpg';
+import imgOffice2 from '../assets/galary/office 2.jpg';
+import imgOfficeCleaning from '../assets/galary/office cleaning 1.jpg';
+import imgPostConstruction from '../assets/galary/Post construction1.jpg';
+
 const galleryItems = [
-  { id: 1, category: 'cleaning', title: 'Office Cleaning', icon: '🏢' },
-  { id: 2, category: 'facade', title: 'High-Rise Façade', icon: '🏙️' },
-  { id: 3, category: 'landscape', title: 'Landscape Maintenance', icon: '🌿' },
-  { id: 4, category: 'manpower', title: 'Manpower Briefing', icon: '👷' },
-  { id: 5, category: 'industrial', title: 'Cleanroom Sanitation', icon: '🏭' },
-  { id: 6, category: 'cleaning', title: 'Carpet Cleaning', icon: '🪣' },
-  { id: 7, category: 'facade', title: 'Gondola Operations', icon: '🗼' },
-  { id: 8, category: 'cleaning', title: 'Mall Maintenance', icon: '🏬' },
-  { id: 9, category: 'manpower', title: 'Staff Deployment', icon: '👥' },
+  { id: 1, category: 'cleaning', title: 'Office Full Cleaning', image: imgOfficeCleaning },
+  { id: 2, category: 'landscape', title: 'Professional Landscaping', image: imgLandscaping },
+  { id: 3, category: 'cleaning', title: 'Office Space Maintenance', image: imgOffice2 },
+  { id: 4, category: 'facade', title: 'Post Construction Clean', image: imgPostConstruction },
 ];
 
 const categories = [
@@ -98,8 +98,8 @@ export default function Gallery() {
                   className="gallery-item"
                   onClick={() => openLightbox(index)}
                 >
-                  <div className="gallery-img-placeholder">
-                    <span>{item.icon}</span>
+                  <div className="gallery-img-wrapper">
+                    <img src={item.image} alt={item.title} className="gallery-img" />
                   </div>
                   <div className="gallery-overlay">
                     <FiZoomIn className="zoom-icon" />
@@ -122,8 +122,8 @@ export default function Gallery() {
             <FiX size={24} />
           </button>
           <div className="lightbox-content" onClick={e => e.stopPropagation()}>
-            <div className="lightbox-img-placeholder">
-              <span>{filteredItems[lightboxIndex].icon}</span>
+            <div className="lightbox-img-wrapper">
+              <img src={filteredItems[lightboxIndex].image} alt="Enlarged" className="lightbox-img" />
             </div>
             <div className="lightbox-caption">
               <h4>{filteredItems[lightboxIndex].title}</h4>

@@ -64,7 +64,7 @@ export default function Contact() {
                     <div className="cd-icon"><FiMapPin /></div>
                     <div className="cd-content">
                       <h4>Head Office</h4>
-                      <p>No. 12, Jalan Industri, Taman Perindustrian,<br />47500 Subang Jaya, Selangor, Malaysia</p>
+                      <p>No 5-02 (5th Floor), Plaza Prima Batu 4 ½,<br />Jalan Klang Lama, 58200 Kuala Lumpur.</p>
                     </div>
                   </div>
                   
@@ -73,8 +73,7 @@ export default function Contact() {
                     <div className="cd-content">
                       <h4>Phone Requirements</h4>
                       <p>
-                        <a href="tel:+60123456789">+60 12-345 6789</a> (General)<br />
-                        <a href="tel:+60123456788">+60 12-345 6788</a> (Sales)
+                        <a href="tel:0379726456">03-7972 6456</a> (Office)
                       </p>
                     </div>
                   </div>
@@ -164,7 +163,7 @@ export default function Contact() {
         <ScrollReveal>
           <div className="map-container">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127482.68412635955!2d101.5530188099632!3d3.0730870830230267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4c8f5912644b%3A0x7731c263da8da6c6!2sSubang%20Jaya%2C%20Selangor%2C%20Malaysia!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Plaza%20Prima,%20Batu%204%201/2,%20Jalan%20Klang%20Lama,%2058200%20Kuala%20Lumpur+(ARS%20Multigroup)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

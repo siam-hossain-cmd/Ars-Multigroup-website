@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiAward, FiUsers, FiZap, FiSun } from 'react-icons/fi';
+import officeImg from '../../assets/galary/office 2.jpg';
 import ScrollReveal from '../shared/ScrollReveal';
 import SectionHeader from '../shared/SectionHeader';
 import './AboutPreview.css';
 
 const values = [
-  { icon: '🏆', title: 'Excellence', desc: 'We deliver outstanding quality in every service we provide.' },
-  { icon: '🤝', title: 'Integrity', desc: 'Honest, transparent relationships with every client.' },
-  { icon: '⚡', title: 'Reliability', desc: 'Trusted workforce showing up on time, every time.' },
-  { icon: '🌱', title: 'Sustainability', desc: 'Eco-conscious methods for a greener tomorrow.' },
+  { icon: <FiAward />, title: 'Excellence', desc: 'We deliver outstanding quality in every service we provide.' },
+  { icon: <FiUsers />, title: 'Integrity', desc: 'Honest, transparent relationships with every client.' },
+  { icon: <FiZap />, title: 'Reliability', desc: 'Trusted workforce showing up on time, every time.' },
+  { icon: <FiSun />, title: 'Sustainability', desc: 'Eco-conscious methods for a greener tomorrow.' },
 ];
 
 export default function AboutPreview() {
@@ -20,22 +21,16 @@ export default function AboutPreview() {
           <ScrollReveal>
             <div className="about-visual">
               <div className="about-img-main">
-                <div className="about-img-placeholder">
-                  <div className="about-img-content">
-                    <div className="about-img-icon">🏢</div>
-                    <p>ARS Multigroup Office</p>
-                    <span>Subang Jaya, Selangor</span>
-                  </div>
-                </div>
+                <img src={officeImg} alt="ARS Multigroup Office" className="about-img-real" />
               </div>
               <div className="about-img-badge">
                 <div className="badge-inner">
-                  <span className="badge-num">10+</span>
+                  <span className="badge-num">**</span>
                   <span className="badge-text">Years of<br />Excellence</span>
                 </div>
               </div>
               <div className="about-img-cert">
-                <span>🏅</span>
+                <FiAward color="var(--accent)" />
                 <div>
                   <strong>100% Bumiputra</strong>
                   <span>Certified Company</span>

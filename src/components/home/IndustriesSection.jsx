@@ -1,16 +1,17 @@
 import ScrollReveal from '../shared/ScrollReveal';
 import SectionHeader from '../shared/SectionHeader';
+import { FiBriefcase, FiHeart, FiShield, FiBook, FiHome, FiSend, FiShoppingBag, FiSettings } from 'react-icons/fi';
 import './IndustriesSection.css';
 
 export const industries = [
-  { icon: '🏢', title: 'Office Buildings', desc: 'Corporate offices, coworking spaces, and business parks.' },
-  { icon: '🏥', title: 'Hospitals & Clinics', desc: 'Healthcare facilities requiring sterile, hygienic environments.' },
-  { icon: '🏦', title: 'Banks & Finance', desc: 'High-security premises maintained to banking standards.' },
-  { icon: '🎓', title: 'Education', desc: 'Universities, colleges, schools, and learning centres.' },
-  { icon: '🏠', title: 'Condominiums', desc: 'Residential towers, apartments, and gated communities.' },
-  { icon: '✈️', title: 'Airports', desc: 'Terminals, lounges, and airside facility management.' },
-  { icon: '🛍️', title: 'Shopping Malls', desc: 'Retail malls, hypermarkets, and commercial complexes.' },
-  { icon: '🏭', title: 'Industrial Facilities', desc: 'Factories, warehouses, and manufacturing plants.' },
+  { icon: <FiBriefcase size={28} />, title: 'Office Buildings', desc: 'Corporate offices, coworking spaces, and business parks.' },
+  { icon: <FiHeart size={28} />, title: 'Hospitals & Clinics', desc: 'Healthcare facilities requiring sterile, hygienic environments.' },
+  { icon: <FiShield size={28} />, title: 'Banks & Finance', desc: 'High-security premises maintained to banking standards.' },
+  { icon: <FiBook size={28} />, title: 'Education', desc: 'Universities, colleges, schools, and learning centres.' },
+  { icon: <FiHome size={28} />, title: 'Condominiums', desc: 'Residential towers, apartments, and gated communities.' },
+  { icon: <FiSend size={28} />, title: 'Airports', desc: 'Terminals, lounges, and airside facility management.' },
+  { icon: <FiShoppingBag size={28} />, title: 'Shopping Malls', desc: 'Retail malls, hypermarkets, and commercial complexes.' },
+  { icon: <FiSettings size={28} />, title: 'Industrial Facilities', desc: 'Factories, warehouses, and manufacturing plants.' },
 ];
 
 export default function IndustriesSection() {

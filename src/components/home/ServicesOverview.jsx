@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiHome, FiBriefcase, FiTool, FiLayers, FiBox, FiShoppingBag, FiSettings, FiMaximize, FiSun, FiTrash2, FiTruck, FiTag } from 'react-icons/fi';
 import ScrollReveal from '../shared/ScrollReveal';
 import SectionHeader from '../shared/SectionHeader';
 import './ServicesOverview.css';
@@ -7,15 +7,31 @@ import './ServicesOverview.css';
 export const allServices = [
   {
     id: 'general-cleaning',
-    icon: '🧹',
+    icon: <FiHome size={28} />,
     title: 'General Cleaning',
     shortDesc: 'Comprehensive daily, weekly, and one-off cleaning for all commercial premises.',
     desc: 'Our general cleaning service covers routine office cleaning, floor mopping, vacuuming, sanitization, rubbish removal, and restroom maintenance. Ideal for offices, shops, and commercial spaces.',
     color: '#0B2C5F',
   },
   {
+    id: 'car-wash',
+    icon: <FiTruck size={28} />,
+    title: 'Bubble Car Wash',
+    shortDesc: 'Professional auto-detailing and premium car wash services.',
+    desc: 'Operated under "Bubble Car Wash" & "Pusat Cuci Kereta", we provide full exterior wash, interior vacuuming, snow wash, polishing, and fleet maintenance cleaning.',
+    color: '#1A4A9A',
+  },
+  {
+    id: 'fashion',
+    icon: <FiTag size={28} />,
+    title: 'Fashion & Retail',
+    shortDesc: 'Quality fashion apparel, corporate uniforms, and retail distribution.',
+    desc: 'Supply and distribution of professional corporate uniforms, safety wear, and high-quality contemporary fashion apparel.',
+    color: '#C8973A',
+  },
+  {
     id: 'housekeeping',
-    icon: '🏨',
+    icon: <FiBriefcase size={28} />,
     title: 'Housekeeping & Comprehensive Cleaning',
     shortDesc: 'Full housekeeping services with trained staff for hospitality and commercial needs.',
     desc: 'End-to-end housekeeping including linen management, surface cleaning, and deep sanitation for hotels, hospitals, and condominiums.',
@@ -23,7 +39,7 @@ export const allServices = [
   },
   {
     id: 'post-construction',
-    icon: '🏗️',
+    icon: <FiTool size={28} />,
     title: 'Post-Construction Cleaning',
     shortDesc: 'Thorough deep clean after renovation or construction works, ready for handover.',
     desc: 'Removal of construction debris, cement residue, paint splashes, and dust from all surfaces. We prepare your space for immediate use.',
@@ -31,7 +47,7 @@ export const allServices = [
   },
   {
     id: 'carpet-floor',
-    icon: '🪣',
+    icon: <FiLayers size={28} />,
     title: 'Carpet & Floor Cleaning',
     shortDesc: 'Professional carpet shampooing, floor polishing, and hard surface restoration.',
     desc: 'Using industrial-grade equipment, we deep clean carpets, polish marble and tiles, and restore hard floors to their original shine.',
@@ -39,7 +55,7 @@ export const allServices = [
   },
   {
     id: 'fabric-upholstery',
-    icon: '🛋️',
+    icon: <FiBox size={28} />,
     title: 'Fabric & Upholstery Cleaning',
     shortDesc: 'Specialized cleaning for fabric furniture, sofas, curtains, and upholstery.',
     desc: 'We use eco-friendly solutions to remove stains, odours, and allergens from fabric seats, sofas, chairs, and curtains.',
@@ -47,7 +63,7 @@ export const allServices = [
   },
   {
     id: 'shopping-mall',
-    icon: '🏬',
+    icon: <FiShoppingBag size={28} />,
     title: 'Shopping Mall Cleaning',
     shortDesc: 'High-traffic area cleaning services for retail malls and commercial complexes.',
     desc: 'Round-the-clock cleaning for common areas, toilets, concourses, F&B zones, and parking areas in shopping malls.',
@@ -55,7 +71,7 @@ export const allServices = [
   },
   {
     id: 'industrial-cleanroom',
-    icon: '🏭',
+    icon: <FiSettings size={28} />,
     title: 'Industrial & Cleanroom Cleaning',
     shortDesc: 'Specialized cleaning for factories, warehouses, and controlled environments.',
     desc: 'ISO-compliant cleanroom cleaning services and heavy-duty industrial facility maintenance using certified procedures and equipment.',
@@ -63,7 +79,7 @@ export const allServices = [
   },
   {
     id: 'facade-cleaning',
-    icon: '🏙️',
+    icon: <FiMaximize size={28} />,
     title: 'High-Rise Façade Cleaning',
     shortDesc: 'Safe and professional exterior glass and wall cleaning for high-rise buildings.',
     desc: 'Using rope access and gondola systems, our certified team cleans exterior facades, glass curtain walls, and building exteriors safely.',
@@ -71,7 +87,7 @@ export const allServices = [
   },
   {
     id: 'landscape',
-    icon: '🌿',
+    icon: <FiSun size={28} />,
     title: 'Landscape & Ground Maintenance',
     shortDesc: 'Complete landscaping, lawn care, and outdoor maintenance services.',
     desc: 'From lawn mowing and hedge trimming to garden design and irrigation maintenance, we keep outdoor areas pristine and beautiful.',
@@ -79,20 +95,12 @@ export const allServices = [
   },
   {
     id: 'waste-management',
-    icon: '♻️',
+    icon: <FiTrash2 size={28} />,
     title: 'Waste / Linen / Pottering Service',
     shortDesc: 'Waste collection, linen management, and logistics support services.',
     desc: 'Scheduled waste collection, linen laundry and delivery, and general pottering services for hotels and healthcare facilities.',
     color: '#C8973A',
-  },
-  {
-    id: 'car-wash',
-    icon: '🚗',
-    title: 'Car Wash Services',
-    shortDesc: 'Professional auto-detailing and car wash for corporate fleets and individuals.',
-    desc: 'On-site or at our facility, we provide full exterior wash, interior vacuuming, polishing, and fleet maintenance cleaning.',
-    color: '#0B2C5F',
-  },
+  }
 ];
 
 export default function ServicesOverview() {

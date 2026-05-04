@@ -4,29 +4,22 @@ import { FiArrowRight, FiCheckCircle, FiHome, FiTarget, FiEye } from 'react-icon
 import ScrollReveal from '../components/shared/ScrollReveal';
 import SectionHeader from '../components/shared/SectionHeader';
 import CtaBanner from '../components/home/CtaBanner';
+import ssmImg from '../assets/galary/ssm .png';
+import dbklImg from '../assets/galary/lesen dbkl.png';
+import auniImg from '../assets/galary/auni.jpeg';
+import ashikinImg from '../assets/galary/IMG_ashikin.jpg';
 import './About.css';
 
-const timeline = [
-  { year: '2010', title: 'Company Founded', desc: 'ARS Multigroup established in Selangor with a focus on general cleaning services.' },
-  { year: '2013', title: 'Manpower Division', desc: 'Expanded to offer comprehensive manpower supply and outsourcing solutions.' },
-  { year: '2016', title: 'Industrial Services', desc: 'Launched industrial cleaning and cleanroom services for manufacturing clients.' },
-  { year: '2019', title: 'Façade & Landscape', desc: 'Added high-rise façade cleaning and landscape maintenance to our portfolio.' },
-  { year: '2023', title: 'Growing Strong', desc: 'Serving 500+ clients across Malaysia with a workforce of 1,200+ staff.' },
-];
-
 const team = [
-  { name: 'Dato\' Abd. Rahman', role: 'Chief Executive Officer', initial: 'AR' },
-  { name: 'Sharifah Norzila', role: 'Operations Director', initial: 'SN' },
-  { name: 'Mohd Fadzli', role: 'Head of Manpower', initial: 'MF' },
-  { name: 'Norhayati Khalid', role: 'Client Relations Manager', initial: 'NK' },
+  { name: 'Nurul Ashikin Binti Sarif Husin', role: 'Executive Director', initial: 'NA', image: ashikinImg },
+  { name: 'Nurul Auni Binti Sarif Husin', role: 'Human Resources', initial: 'NA', image: auniImg },
+  { name: 'Nurul Islam Binti Hairudin', role: 'Admin Office', initial: 'NI', image: null },
 ];
 
 const registrations = [
   { label: 'Company Registration', value: 'ARS Multigroup Sdn. Bhd.' },
   { label: 'SSM Registration No.', value: '201801024075 (1286095-V)' },
   { label: 'Bumiputra Status', value: '100% Bumiputra Company' },
-  { label: 'CIDB Registered', value: 'Grade G1 – G7' },
-  { label: 'MOF Registered', value: 'Ministry of Finance Malaysia' },
   { label: 'Office Address', value: 'No 5-02 (5th Floor), Plaza Prima Batu 4 ½, Jalan Klang Lama, 58200 Kuala Lumpur.' },
 ];
 
@@ -142,30 +135,30 @@ export default function About() {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="section about-timeline">
+      {/* Certifications & Compliance */}
+      <section className="section about-certifications">
         <div className="container">
           <ScrollReveal>
             <SectionHeader
-              badge="Our Journey"
-              title="Company"
-              highlight="History"
-              subtitle="A decade of growth, excellence, and expanding capabilities."
+              badge="Official Documents"
+              title="Certifications &"
+              highlight="Compliance"
+              subtitle="Our official licenses and business registrations."
             />
           </ScrollReveal>
-          <div className="timeline">
-            {timeline.map((item, i) => (
-              <ScrollReveal key={item.year} delay={i * 80}>
-                <div className={`timeline-item ${i % 2 === 0 ? 'left' : 'right'}`}>
-                  <div className="timeline-dot" />
-                  <div className="timeline-card">
-                    <div className="timeline-year">{item.year}</div>
-                    <h3 className="timeline-title">{item.title}</h3>
-                    <p className="timeline-desc">{item.desc}</p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
+          <div className="cert-grid">
+            <ScrollReveal delay={100}>
+              <div className="cert-card">
+                <img src={ssmImg} alt="SSM Certificate" />
+                <h4>SSM Registration</h4>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <div className="cert-card">
+                <img src={dbklImg} alt="DBKL License" />
+                <h4>Lesen DBKL</h4>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -185,7 +178,11 @@ export default function About() {
             {team.map((member, i) => (
               <ScrollReveal key={member.name} delay={i * 80}>
                 <div className="team-card">
-                  <div className="team-avatar">{member.initial}</div>
+                  {member.image ? (
+                    <img src={member.image} alt={member.name} className="team-avatar-img" />
+                  ) : (
+                    <div className="team-avatar">{member.initial}</div>
+                  )}
                   <h3 className="team-name">{member.name}</h3>
                   <p className="team-role">{member.role}</p>
                 </div>

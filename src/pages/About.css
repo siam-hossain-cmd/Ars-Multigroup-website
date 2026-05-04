@@ -217,8 +217,10 @@
 /* Team */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .team-card {
@@ -236,9 +238,20 @@
   box-shadow: var(--shadow-lg);
 }
 
+.team-avatar-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto var(--spacing-md);
+  display: block;
+  border: 4px solid var(--primary-light);
+  box-shadow: var(--shadow-sm);
+}
+
 .team-avatar {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--primary), var(--primary-light));
   display: flex;
@@ -246,7 +259,7 @@
   justify-content: center;
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: var(--white);
   margin: 0 auto var(--spacing-md);
 }
@@ -284,4 +297,52 @@
 @media (max-width: 640px) {
   .credentials-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
+}
+
+/* Certifications */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cert-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 1.25rem;
+  text-align: center;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.cert-card img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: var(--radius-sm);
+}
+
+.cert-card h4 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .cert-grid { grid-template-columns: 1fr; }
 }
